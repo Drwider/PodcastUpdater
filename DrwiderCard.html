@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    * {
+      font-family: Helvetica;
+    }
+
+    .container {
+      perspective: 700;
+    }
+
+    .card {
+      position: relative;
+      color: #000;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      transition: all 0.6s ease;
+      transform-style: preserve-3d;
+    }
+
+    .center {
+      width: 100px;
+      height: 100px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .front,
+    .back {
+      display: table;
+      background: #f05858;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
+
+    .front {
+      line-height: 100px;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+
+    .backheading {
+      font-size: 16px;
+    }
+
+    .backlink {
+      color: #545454;
+    }
+
+    h1 {
+      margin: 0;
+      color: #545454;
+      font-size: 50px;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function getParamValue(paramName) {
+      var url = window.location.search.substring(1); //get rid of "?" in querystring
+      var qArray = url.split('&'); //get key-value pairs
+      for (var i = 0; i < qArray.length; i++) {
+        var pArr = qArray[i].split('='); //split key and value
+        if (pArr[0] == paramName)
+          return pArr[1]; //return value
+      }
+    }
+    document.addEventListener("DOMContentLoaded", function(event) {
+      $("#sc").attr("href", decodeURIComponent(getParamValue("sc")));
+      $("#it").attr("href", decodeURIComponent(getParamValue("it")));
+      $("#num").html(decodeURIComponent(getParamValue("num")));
+
+    });
+  </script>
+  <div class="container" ontouchstart="this.classlist.toggle('hover')">
+    <div class="card">
+      <div class="front">
+        <h1 id="num">27</h1>
+      </div>
+      <div class="back">
+        <div class="center">
+          <h1 class="backheading"><a id="sc" target="_blank" href="" class="backlink">Soundcloud</a></h1>
+          <hr color="black" width="72px" />
+          <h1 class="backheading"><a id="it" target="_blank" href="" class="backlink">iTunes</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

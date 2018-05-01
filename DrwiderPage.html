@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cards</title>
+  <style>
+    iframe {
+      border: none;
+      display: inline-block;
+      margin: 0px;
+      height: 120px;
+      width: 120px;
+    }
+    h1 {
+      font-family: Helvetica;
+      margin: 0 20px;
+      padding: 2px;
+      width: 250px;
+    }
+  </style>
+  <script>
+    var CardProto = Object.create(HTMLElement.prototype);
+
+    CardProto.createdCallback = function() {
+      var root = this.createShadowRoot();
+      var iframe = document.createElement("iframe");
+      var it = encodeURIComponent(this.getAttribute("itunes-link"));
+      var sc = encodeURIComponent(this.getAttribute("soundcloud-link"));
+      var num = this.getAttribute("num");
+      iframe.src = 'http://drwider.com/wp-content/uploads/DrwiderCard.html?num=' + num + '&sc=' + sc + '&it=' + it;
+      iframe.style = "border: none; display: inline-block; margin: 0px; height: 120px; width: 120px;"
+      iframe.innerText = "<p>Iframe does not work on your computer.</p>";
+      root.appendChild(iframe);
+    };
+    var DrwiderCard = document.registerElement('drwider-card', {
+      prototype: CardProto
+    });
+  </script>
+</head>
+<body>
+  <div>
+    <h1>Hover over the cards to access the links.</h1>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=1&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-number-1&it=http://apple.co/2wlYtKm"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=2&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-2&it=http://apple.co/2vBEEh6"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=3&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-3&it=http://apple.co/2wQd8Rh"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=4&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-4&it=http://apple.co/2vKqBVQ"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=5&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-5&it=http://apple.co/2grX0OS"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=6&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-ep-7&it=http://apple.co/2grX3u2"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=7&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-8&it=http://apple.co/2grX5lE"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=8&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-ep-8&it=http://apple.co/2wp5bzj"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=9&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-ep-9&it=http://apple.co/2gsfRJP"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=10&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-9&it=http://apple.co/2wTUojB"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=11&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-11&it=http://apple.co/2x6tdRX"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=12&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-12&it=http://apple.co/2wKcVhT"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=13&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-13&it=http://apple.co/2wU4Mb4"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=14&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-14&it=http://apple.co/2xyI1XB"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=15&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-15&it=http://apple.co/2wjnN5x"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=16&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-16&it=http://apple.co/2vG5Yux"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=17&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-17&it=http://apple.co/2xNDyzw"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=18&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-ep-18&it=http://bit.ly/2xztNWk"><p>Iframe does n ot work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=19&sc=https://soundcloud.com/kennyzimlinghaus/wider-19&it=http://apple.co/2xz11Fm"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=20&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-20&it=http://apple.co/2vtorhS"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=21&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-21&it=http://apple.co/2ervxMO"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=22&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-22&it=http://apple.co/2ekJE2M"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=23&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-23&it=http://apple.co/2wKwerE"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=24&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-24&it=http://apple.co/2grurRJ"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=25&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-25&it=http://apple.co/2gq5BRW"><p>Iframe does not work on your computer.</p></iframe>
+    <iframe src="http://drwider.com/wp-content/uploads/DrwiderCard.html?num=26&sc=https://soundcloud.com/kennyzimlinghaus/open-wider-26&it=http://apple.co/2x6H6j8"><p>Iframe does not work on your computer.</p></iframe>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-27" itunes-link="https://itunes.apple.com/us/podcast/open-wider-27/id1100528546?i=1000391551036&mt=2" num="27"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-28" itunes-link="https://itunes.apple.com/us/podcast/open-wider-28/id1100528546?i=1000391978208&mt=2" num="28"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-29" itunes-link="https://itunes.apple.com/us/podcast/open-wider-29/id1100528546?i=1000392226578&mt=2" num="29"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-30" itunes-link="https://itunes.apple.com/us/podcast/open-wider-30/id1100528546?i=1000392562973&mt=2" num="30"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider31" itunes-link="https://itunes.apple.com/us/podcast/open-wider31/id1100528546?i=1000393078869&mt=2" num="31"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-32" itunes-link="https://itunes.apple.com/us/podcast/open-wider-32/id1100528546?i=1000393431263&mt=2" num="32"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-33" itunes-link="https://itunes.apple.com/us/podcast/open-wider-33-dating-sleepwalking-and-sweat/id1100528546?i=1000393776664&mt=2" num="33"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-34-breastfeeding-pressure-spasms-and-kennys-vagina" itunes-link="https://itunes.apple.com/us/podcast/open-wider-34-breastfeeding-pressure-spasms-kennys/id1100528546?i=1000394000400&mt=2" num="34"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-halloween-wider-the-scariest-medical-stories" itunes-link="https://itunes.apple.com/us/podcast/open-halloween-wider-the-scariest-medical-stories/id1100528546?i=1000394233871&mt=2" num="🎃"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-35-chelsea-has-the-baby" itunes-link="https://itunes.apple.com/us/podcast/open-wider-35-chelsea-has-the-baby/id1100528546?i=1000394666174&mt=2" num="35"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-36-stuck-in-small-spaces-and-peeing-in-the-sink" itunes-link="https://itunes.apple.com/us/podcast/open-wider-36-stuck-in-small-spaces-and-peeing-in-the-sink/id1100528546?i=1000394851272&mt=2" num="36"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/thanksgiving-special" itunes-link="https://itunes.apple.com/us/podcast/thanksgiving-special/id1100528546?i=1000395142543&mt=2" num="🦃"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-37-school-physicals-snoring-dr-happy-hands" itunes-link="https://itunes.apple.com/us/podcast/open-wider-37-school-physicals-snoring-dr-happy-hands/id1100528546?i=1000395420481&mt=2" num="37"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-38-head-transplants-sleeping-with-pets" itunes-link="https://itunes.apple.com/us/podcast/open-wider-38-head-transplants-sleeping-with-pets/id1100528546?i=1000396789088&mt=2" num="38"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-with-kenny-z-39" itunes-link="https://itunes.apple.com/us/podcast/open-wider-with-kenny-z-39/id1100528546?i=1000397369340&mt=2" num="39"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-holiday" itunes-link="https://itunes.apple.com/us/podcast/open-wider-holiday/id1100528546?i=1000398082836&mt=2" num="🎅🏻"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-with-guests-caroline-rhea-and-todd-wider-the-brother" itunes-link="https://itunes.apple.com/us/podcast/open-wider-special-guests-caroline-rhea-todd-wider/id1100528546?i=1000398510168&mt=2" num="🍾"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/soundcloudcom" itunes-link="https://itunes.apple.com/us/podcast/open-wider-with-kenny-z-40/id1100528546?i=1000399022120&mt=2" num="40"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-41" itunes-link="https://itunes.apple.com/us/podcast/open-wider-41/id1100528546?i=1000399823708&mt=2" num="41"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-42..." itunes-link="https://itunes.apple.com/us/podcast/open-wider-42/id1100528546?i=1000400081268&mt=2" num="42"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-43-the-flu-tide-pods-and-going-gyno" itunes-link="https://itunes.apple.com/us/podcast/open-wider-43-the-flu-tide-pods-and-going-gyno/id1100528546?i=1000400600911&mt=2" num="43"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-44-maternity-leave-listener-emails-thumb-sucking-showering" itunes-link="https://itunes.apple.com/us/podcast/open-wider-44-maternity-leave-listener-emails-thumb/id1100528546?i=1000401226971&mt=2" num="44"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-45-contagious-construction-and-rest-stop-disaster" itunes-link="https://itunes.apple.com/us/podcast/open-wider-45-contagious-construction-rest-stop-disaster/id1100528546?i=1000401703775&mt=2" num="45"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/openwider-46-ear-plugs-heart-health-month-yall-and-more" itunes-link="https://itunes.apple.com/us/podcast/openwider-46-ear-plugs-heart-health-month-yall-and-more/id1100528546?i=1000401988639&mt=2" num="46"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-47" itunes-link="https://itunes.apple.com/us/podcast/open-wider-47/id1100528546?i=1000402588747&mt=2" num="47"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-48-lactose-measles-and-nut-milk" itunes-link="https://itunes.apple.com/us/podcast/open-wider-48-lactose-measles-and-nut-milk/id1100528546?i=1000404168240&mt=2" num="48"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-49" itunes-link="https://itunes.apple.com/us/podcast/open-wider-49/id1100528546?i=1000405669855&mt=2" num="49"></drwider-card>
+    <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-50-claustrophobia-charcoal-teeth-brushing" itunes-link="https://itunes.apple.com/us/podcast/open-wider-50-claustrophobia-charcoal-teeth-brushing/id1100528546?i=1000407192237&mt=2" num="50"></drwider-card>
+<drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-51" itunes-link="https://itunes.apple.com/us/podcast/open-wider-51/id1100528546?i=1000408096384&mt=2" num="51"></drwider-card>
+<drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-52-condom-snorting-turpentine-drinking-and-puppies" itunes-link="https://itunes.apple.com/us/podcast/open-wider-52-condom-snorting-turpentine-drinking-puppies/id1100528546?i=1000408306641&mt=2" num="52"></drwider-card>
+<drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-53-the-thyroid-penis-transplant" itunes-link="https://itunes.apple.com/us/podcast/open-wider-52-condom-snorting-turpentine-drinking-puppies/id1100528546?i=1000408306641&mt=2" num="53"></drwider-card>
+<!-- To add new card copy and paste "<drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-53-the-thyroid-penis-transplant" itunes-link="..." num="..."></drwider-card>" without quotes
+ex: <drwider-card soundcloud-link="https://soundcloud.com/kennyzimlinghaus/open-wider-number-1" itunes-link="http://apple.co/2wlYtKm" num="1"></drwider-card>
+Note: you do not need to use bitly for the itunes link.-->
+</div>
+</body></html>
