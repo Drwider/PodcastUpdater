@@ -28,7 +28,7 @@
       var it = encodeURIComponent(this.getAttribute("itunes-link"));
       var sc = encodeURIComponent(this.getAttribute("soundcloud-link"));
       var num = this.getAttribute("num");
-      iframe.src = 'http://drwider.com/wp-content/uploads/DrwiderCard.html?num=' + num + '&sc=' + sc + '&it=' + it;
+      iframe.src = 'https://github.com/Drwider/PodcastUpdater/blob/master/DrwiderCard.html' + num + '&sc=' + sc + '&it=' + it;
       iframe.style = "border: none; display: inline-block; margin: 0px; height: 120px; width: 120px;"
       iframe.innerText = "<p>Iframe does not work on your computer.</p>";
       root.appendChild(iframe);
